@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- saved from url=(0044)file:///C:/Users/User/Downloads/index_1.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Campanha Copa do Mundo — Grupo Ável</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="./index_files/css2" rel="stylesheet">
 <style>
 :root {
   --bg:       #0a0c10;
@@ -210,9 +210,11 @@ tbody td{padding:0.75rem 1rem;vertical-align:middle}
 .resp-VH .resp-dot{background:#4d9fff}
 .resp-PT .resp-dot{background:#a78bfa}
 .resp-FR .resp-dot{background:#fb923c}
+.resp-CV .resp-dot{background:#00d68f}
 .resp-VH{border-color:rgba(77,159,255,0.25)}
 .resp-PT{border-color:rgba(167,139,250,0.25)}
 .resp-FR{border-color:rgba(251,146,60,0.25)}
+.resp-CV{border-color:rgba(0,214,143,0.25)}
 
 .vol-cell{font-family:'DM Mono',monospace;font-size:13px;font-weight:500;text-align:right}
 .vol-today{color:var(--green);font-size:12px}
@@ -367,6 +369,11 @@ footer{
 
   <!-- KPIs -->
   <div class="kpi-grid">
+    <div class="kpi-card" style="animation-delay:0s;--card-accent:var(--gold);border-color:rgba(245,197,66,0.18)">
+      <div class="kpi-label">Clientes na campanha</div>
+      <div class="kpi-val" style="color:var(--gold)" id="kpi-total-clientes">28</div>
+      <div class="kpi-sub">aptos participando</div>
+    </div>
     <div class="kpi-card green" style="animation-delay:0.05s">
       <div class="kpi-label">Elegíveis</div>
       <div class="kpi-val" id="kpi-elegivel">1</div>
@@ -374,36 +381,36 @@ footer{
     </div>
     <div class="kpi-card" style="animation-delay:0.1s;--card-accent:#4d9fff;border-color:rgba(77,159,255,0.18)">
       <div class="kpi-label">No Pace</div>
-      <div class="kpi-val" style="color:var(--blue)" id="kpi-nopace">3</div>
+      <div class="kpi-val" style="color:var(--blue)" id="kpi-nopace">6</div>
       <div class="kpi-sub">ritmo adequado</div>
     </div>
     <div class="kpi-card amber" style="animation-delay:0.15s">
       <div class="kpi-label">Atenção</div>
-      <div class="kpi-val" id="kpi-atencao">4</div>
+      <div class="kpi-val" id="kpi-atencao">2</div>
       <div class="kpi-sub">acionar esta semana</div>
     </div>
     <div class="kpi-card red" style="animation-delay:0.2s">
       <div class="kpi-label">Risco</div>
-      <div class="kpi-val" id="kpi-risco">20</div>
+      <div class="kpi-val" id="kpi-risco">19</div>
       <div class="kpi-sub">contato urgente</div>
     </div>
     <div class="kpi-card gold" style="animation-delay:0.25s">
       <div class="kpi-label">Volume hoje</div>
-      <div class="kpi-val" id="kpi-hoje">226</div>
+      <div class="kpi-val" id="kpi-hoje">218</div>
       <div class="kpi-sub">contratos no dia</div>
     </div>
     <div class="kpi-card" style="animation-delay:0.3s">
       <div class="kpi-label">Volume total</div>
-      <div class="kpi-val" style="color:var(--text)" id="kpi-total">5.075</div>
+      <div class="kpi-val" style="color:var(--text)" id="kpi-total">4.837</div>
       <div class="kpi-sub">acumulado campanha</div>
     </div>
   </div>
 
   <!-- TABS -->
   <div class="tabs">
-    <button class="tab-btn active" onclick="showTab('clientes',this)">Clientes</button>
-    <button class="tab-btn" onclick="showTab('responsaveis',this)">Por Responsável</button>
-    <button class="tab-btn" onclick="showTab('insights',this)">Insights</button>
+    <button class="tab-btn active" onclick="showTab(&#39;clientes&#39;,this)">Clientes</button>
+    <button class="tab-btn" onclick="showTab(&#39;responsaveis&#39;,this)">Por Responsável</button>
+    <button class="tab-btn" onclick="showTab(&#39;insights&#39;,this)">Insights</button>
   </div>
 
   <!-- TAB CLIENTES -->
@@ -412,13 +419,13 @@ footer{
       <div class="section-header">
         <div class="section-title">Todos os clientes aptos</div>
         <div class="filters">
-          <button class="filter-btn active" onclick="setFilter('todos',this)">Todos</button>
-          <button class="filter-btn" onclick="setFilter('Elegível',this)">Elegíveis</button>
-          <button class="filter-btn" onclick="setFilter('No Pace',this)">No Pace</button>
-          <button class="filter-btn" onclick="setFilter('Atenção',this)">Atenção</button>
-          <button class="filter-btn" onclick="setFilter('Risco',this)">Risco</button>
+          <button class="filter-btn active" onclick="setFilter(&#39;todos&#39;,this)">Todos</button>
+          <button class="filter-btn" onclick="setFilter(&#39;Elegível&#39;,this)">Elegíveis</button>
+          <button class="filter-btn" onclick="setFilter(&#39;No Pace&#39;,this)">No Pace</button>
+          <button class="filter-btn" onclick="setFilter(&#39;Atenção&#39;,this)">Atenção</button>
+          <button class="filter-btn" onclick="setFilter(&#39;Risco&#39;,this)">Risco</button>
           <div class="search-wrap">
-            <input type="text" id="searchInput" placeholder="Buscar cliente..." oninput="renderTable()"/>
+            <input type="text" id="searchInput" placeholder="Buscar cliente..." oninput="renderTable()">
           </div>
         </div>
       </div>
@@ -426,18 +433,886 @@ footer{
         <table>
           <thead>
             <tr>
-              <th onclick="sortBy('nome')">Cliente <span id="s-nome"></span></th>
-              <th onclick="sortBy('resp')">Responsável <span id="s-resp"></span></th>
-              <th onclick="sortBy('vol_ant')" style="text-align:right">Anterior <span id="s-vol_ant"></span></th>
-              <th onclick="sortBy('vol_hoje')" style="text-align:right">Hoje <span id="s-vol_hoje"></span></th>
-              <th onclick="sortBy('vol_total')" style="text-align:right">Total <span id="s-vol_total"></span></th>
-              <th onclick="sortBy('faltam')" style="text-align:right">Faltam <span id="s-faltam"></span></th>
-              <th onclick="sortBy('pct')">Progresso</th>
-              <th onclick="sortBy('pace_nec')" style="text-align:right">Pace nec. <span id="s-pace_nec"></span></th>
-              <th onclick="sortBy('status')">Status <span id="s-status"></span></th>
+              <th onclick="sortBy(&#39;nome&#39;)">Cliente <span id="s-nome"></span></th>
+              <th onclick="sortBy(&#39;resp&#39;)">Responsável <span id="s-resp"></span></th>
+              <th onclick="sortBy(&#39;vol_ant&#39;)" style="text-align:right">Anterior <span id="s-vol_ant"></span></th>
+              <th onclick="sortBy(&#39;vol_hoje&#39;)" style="text-align:right">Hoje <span id="s-vol_hoje"></span></th>
+              <th onclick="sortBy(&#39;vol_total&#39;)" style="text-align:right">Total <span id="s-vol_total"> ↓</span></th>
+              <th onclick="sortBy(&#39;faltam&#39;)" style="text-align:right">Faltam <span id="s-faltam"></span></th>
+              <th onclick="sortBy(&#39;pct&#39;)">Progresso</th>
+              <th onclick="sortBy(&#39;pace_nec&#39;)" style="text-align:right">Pace nec. <span id="s-pace_nec"></span></th>
+              <th onclick="sortBy(&#39;status&#39;)">Status <span id="s-status"></span></th>
             </tr>
           </thead>
-          <tbody id="tableBody"></tbody>
+          <tbody id="tableBody">
+    <tr style="animation-delay:0s">
+      <td>
+        <div class="client-name">Cliente 18368235</div>
+        <div class="client-code">#18368235</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-VH">
+          <span class="resp-dot"></span>Victor
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">3.614</td>
+      <td class="vol-cell">
+        <span class="vol-zero">—</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">3.614</td>
+      <td class="vol-cell" style="color:var(--green)">
+        ✓
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:100%;background:#00d68f"></div>
+          </div>
+          <span class="prog-pct">100%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-ok">
+        —
+      </td>
+      <td><span class="status status-elegivel">Elegível</span></td>
+    </tr>
+    <tr style="animation-delay:0.02s">
+      <td>
+        <div class="client-name">Fernando H. Mazon de Oliveira</div>
+        <div class="client-code">#5170260</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-VH">
+          <span class="resp-dot"></span>Victor
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">188</td>
+      <td class="vol-cell">
+        <span class="vol-today">+24</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">212</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        288
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:42.4%;background:#ffb830"></div>
+          </div>
+          <span class="prog-pct">42.4%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-warn">
+        5.9/dia
+      </td>
+      <td><span class="status status-nopace">No Pace</span></td>
+    </tr>
+    <tr style="animation-delay:0.04s">
+      <td>
+        <div class="client-name">Valeska Rebelo Ferrari</div>
+        <div class="client-code">#19365368</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-FR">
+          <span class="resp-dot"></span>Felipe
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">116</td>
+      <td class="vol-cell">
+        <span class="vol-today">+40</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">156</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        344
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:31.2%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">31.2%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-warn">
+        7/dia
+      </td>
+      <td><span class="status status-nopace">No Pace</span></td>
+    </tr>
+    <tr style="animation-delay:0.06s">
+      <td>
+        <div class="client-name">Rafael Aurelio Vieira Barbosa</div>
+        <div class="client-code">#9571240</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-PT">
+          <span class="resp-dot"></span>Paulo
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">122</td>
+      <td class="vol-cell">
+        <span class="vol-today">+24</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">146</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        354
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:29.2%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">29.2%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-warn">
+        7.2/dia
+      </td>
+      <td><span class="status status-nopace">No Pace</span></td>
+    </tr>
+    <tr style="animation-delay:0.08s">
+      <td>
+        <div class="client-name">Felipe A. Fernandes Souto</div>
+        <div class="client-code">#11856899</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-PT">
+          <span class="resp-dot"></span>Paulo
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">76</td>
+      <td class="vol-cell">
+        <span class="vol-today">+24</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">100</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        400
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:20%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">20%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-warn">
+        8.2/dia
+      </td>
+      <td><span class="status status-nopace">No Pace</span></td>
+    </tr>
+    <tr style="animation-delay:0.1s">
+      <td>
+        <div class="client-name">Cliente 4470116</div>
+        <div class="client-code">#4470116</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-VH">
+          <span class="resp-dot"></span>Victor
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">96</td>
+      <td class="vol-cell">
+        <span class="vol-zero">—</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">96</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        404
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:19.2%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">19.2%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-warn">
+        8.2/dia
+      </td>
+      <td><span class="status status-nopace">No Pace</span></td>
+    </tr>
+    <tr style="animation-delay:0.12s">
+      <td>
+        <div class="client-name">Boanerges Carneiro Junior</div>
+        <div class="client-code">#11686220</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-VH">
+          <span class="resp-dot"></span>Victor
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">60</td>
+      <td class="vol-cell">
+        <span class="vol-today">+12</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">72</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        428
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:14.4%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">14.4%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-warn">
+        8.7/dia
+      </td>
+      <td><span class="status status-nopace">No Pace</span></td>
+    </tr>
+    <tr style="animation-delay:0.14s">
+      <td>
+        <div class="client-name">Cliente 16792828</div>
+        <div class="client-code">#16792828</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-FR">
+          <span class="resp-dot"></span>Felipe
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">60</td>
+      <td class="vol-cell">
+        <span class="vol-zero">—</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">60</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        440
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:12%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">12%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        9/dia
+      </td>
+      <td><span class="status status-atencao">Atenção</span></td>
+    </tr>
+    <tr style="animation-delay:0.16s">
+      <td>
+        <div class="client-name">Cliente 15970251</div>
+        <div class="client-code">#15970251</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-PT">
+          <span class="resp-dot"></span>Paulo
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">60</td>
+      <td class="vol-cell">
+        <span class="vol-zero">—</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">60</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        440
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:12%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">12%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        9/dia
+      </td>
+      <td><span class="status status-atencao">Atenção</span></td>
+    </tr>
+    <tr style="animation-delay:0.18s">
+      <td>
+        <div class="client-name">Carlos Punet Vasques</div>
+        <div class="client-code">#4912582</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-FR">
+          <span class="resp-dot"></span>Felipe
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">24</td>
+      <td class="vol-cell">
+        <span class="vol-today">+20</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">44</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        456
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:8.8%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">8.8%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        9.3/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.2s">
+      <td>
+        <div class="client-name">Monique M. Rodrigues C. T. Amaral</div>
+        <div class="client-code">#14283272</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-FR">
+          <span class="resp-dot"></span>Felipe
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">28</td>
+      <td class="vol-cell">
+        <span class="vol-today">+8</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">36</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        464
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:7.2%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">7.2%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        9.5/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.22s">
+      <td>
+        <div class="client-name">Thiago Togniolo de Sa</div>
+        <div class="client-code">#2833617</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-VH">
+          <span class="resp-dot"></span>Victor
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">24</td>
+      <td class="vol-cell">
+        <span class="vol-today">+6</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">30</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        470
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:6%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">6%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        9.6/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.24s">
+      <td>
+        <div class="client-name">Myriam Rodrigues Herculano</div>
+        <div class="client-code">#18230564</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-PT">
+          <span class="resp-dot"></span>Paulo
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">24</td>
+      <td class="vol-cell">
+        <span class="vol-today">+2</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">26</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        474
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:5.2%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">5.2%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        9.7/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.26s">
+      <td>
+        <div class="client-name">Thiago Crespim Peixoto Fortuna</div>
+        <div class="client-code">#17571531</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-PT">
+          <span class="resp-dot"></span>Paulo
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">22</td>
+      <td class="vol-cell">
+        <span class="vol-today">+4</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">26</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        474
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:5.2%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">5.2%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        9.7/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.28s">
+      <td>
+        <div class="client-name">Cliente 19408358</div>
+        <div class="client-code">#19408358</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-VH">
+          <span class="resp-dot"></span>Victor
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">24</td>
+      <td class="vol-cell">
+        <span class="vol-zero">—</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">24</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        476
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:4.8%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">4.8%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        9.7/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.3s">
+      <td>
+        <div class="client-name">Gustavo Kazuo da Silva Sampa</div>
+        <div class="client-code">#2778381</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-PT">
+          <span class="resp-dot"></span>Paulo
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">2</td>
+      <td class="vol-cell">
+        <span class="vol-today">+22</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">24</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        476
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:4.8%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">4.8%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        9.7/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.32s">
+      <td>
+        <div class="client-name">Marcos Andre Juvencio da Silva</div>
+        <div class="client-code">#4886835</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-FR">
+          <span class="resp-dot"></span>Felipe
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">18</td>
+      <td class="vol-cell">
+        <span class="vol-today">+4</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">22</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        478
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:4.4%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">4.4%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        9.8/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.34s">
+      <td>
+        <div class="client-name">Emerson Clemente Araujo</div>
+        <div class="client-code">#13066872</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-VH">
+          <span class="resp-dot"></span>Victor
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">14</td>
+      <td class="vol-cell">
+        <span class="vol-today">+2</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">16</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        484
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:3.2%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">3.2%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        9.9/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.36s">
+      <td>
+        <div class="client-name">William Pereira Soares</div>
+        <div class="client-code">#19012079</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-FR">
+          <span class="resp-dot"></span>Felipe
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">6</td>
+      <td class="vol-cell">
+        <span class="vol-today">+8</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">14</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        486
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:2.8%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">2.8%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        9.9/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.38s">
+      <td>
+        <div class="client-name">Misael Nixon de Souza Salomao</div>
+        <div class="client-code">#2144211</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-PT">
+          <span class="resp-dot"></span>Paulo
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">8</td>
+      <td class="vol-cell">
+        <span class="vol-today">+4</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">12</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        488
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:2.4%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">2.4%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        10/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.4s">
+      <td>
+        <div class="client-name">Rennan Silva Harkusz</div>
+        <div class="client-code">#4219488</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-FR">
+          <span class="resp-dot"></span>Felipe
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">4</td>
+      <td class="vol-cell">
+        <span class="vol-today">+8</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">12</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        488
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:2.4%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">2.4%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        10/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.42s">
+      <td>
+        <div class="client-name">Guilherme Hoppe Inoue</div>
+        <div class="client-code">#2404724</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-VH">
+          <span class="resp-dot"></span>Victor
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">2</td>
+      <td class="vol-cell">
+        <span class="vol-today">+6</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">8</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        492
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:1.6%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">1.6%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        10/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.44s">
+      <td>
+        <div class="client-name">Cliente 4214213</div>
+        <div class="client-code">#4214213</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-VH">
+          <span class="resp-dot"></span>Victor
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">6</td>
+      <td class="vol-cell">
+        <span class="vol-zero">—</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">6</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        494
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:1.2%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">1.2%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        10.1/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.46s">
+      <td>
+        <div class="client-name">Cliente 16789321</div>
+        <div class="client-code">#16789321</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-PT">
+          <span class="resp-dot"></span>Paulo
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">6</td>
+      <td class="vol-cell">
+        <span class="vol-zero">—</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">6</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        494
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:1.2%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">1.2%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        10.1/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.48s">
+      <td>
+        <div class="client-name">Cliente 18957874</div>
+        <div class="client-code">#18957874</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-FR">
+          <span class="resp-dot"></span>Felipe
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">5</td>
+      <td class="vol-cell">
+        <span class="vol-zero">—</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">5</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        495
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:1%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">1%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        10.1/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.5s">
+      <td>
+        <div class="client-name">Cliente 11516837</div>
+        <div class="client-code">#11516837</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-VH">
+          <span class="resp-dot"></span>Victor
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">4</td>
+      <td class="vol-cell">
+        <span class="vol-zero">—</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">4</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        496
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:0.8%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">0.8%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        10.1/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.52s">
+      <td>
+        <div class="client-name">Cliente 4594193</div>
+        <div class="client-code">#4594193</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-PT">
+          <span class="resp-dot"></span>Paulo
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">4</td>
+      <td class="vol-cell">
+        <span class="vol-zero">—</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">4</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        496
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:0.8%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">0.8%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        10.1/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr>
+    <tr style="animation-delay:0.54s">
+      <td>
+        <div class="client-name">Cliente 7432960</div>
+        <div class="client-code">#7432960</div>
+      </td>
+      <td>
+        <span class="resp-badge resp-FR">
+          <span class="resp-dot"></span>Felipe
+        </span>
+      </td>
+      <td class="vol-cell" style="color:var(--muted)">2</td>
+      <td class="vol-cell">
+        <span class="vol-zero">—</span>
+      </td>
+      <td class="vol-cell" style="color:var(--text)">2</td>
+      <td class="vol-cell" style="color:var(--muted)">
+        498
+      </td>
+      <td>
+        <div class="prog-wrap">
+          <div class="prog-track">
+            <div class="prog-bar" style="width:0.4%;background:#ff4d6d"></div>
+          </div>
+          <span class="prog-pct">0.4%</span>
+        </div>
+      </td>
+      <td class="vol-cell pace-bad">
+        10.2/dia
+      </td>
+      <td><span class="status status-risco">Risco</span></td>
+    </tr></tbody>
         </table>
       </div>
     </div>
@@ -520,6 +1395,7 @@ function updateKPIs() {
   const counts = {Elegível:0,"No Pace":0,Atenção:0,Risco:0};
   let hoje=0, total=0;
   DATA.forEach(d => { counts[d.status]++; hoje+=d.vol_hoje; total+=d.vol_total; });
+  document.getElementById('kpi-total-clientes').textContent = DATA.length;
   document.getElementById('kpi-elegivel').textContent = counts['Elegível'];
   document.getElementById('kpi-nopace').textContent = counts['No Pace'];
   document.getElementById('kpi-atencao').textContent = counts['Atenção'];
@@ -549,7 +1425,8 @@ function sortBy(col) {
 function respClass(r) {
   if (r === 'Victor Hugo') return 'resp-VH';
   if (r === 'Paulo Tagliatella') return 'resp-PT';
-  return 'resp-FR';
+  if (r === 'Felipe Rezes') return 'resp-FR';
+  return 'resp-CV';
 }
 function respInitials(r) {
   return r.split(' ').map(w=>w[0]).join('').slice(0,2);
@@ -617,11 +1494,12 @@ function renderTable() {
 
 // RESPONSÁVEIS
 function renderResps() {
-  const resps = ['Victor Hugo','Paulo Tagliatella','Felipe Rezes'];
+  const resps = ['Victor Hugo','Paulo Tagliatella','Felipe Rezes','Cairo Vitoriano'];
   const colors = {
-    'Victor Hugo':   {bg:'rgba(77,159,255,0.15)',color:'#4d9fff'},
+    'Victor Hugo':       {bg:'rgba(77,159,255,0.15)',color:'#4d9fff'},
     'Paulo Tagliatella': {bg:'rgba(167,139,250,0.15)',color:'#a78bfa'},
-    'Felipe Rezes':  {bg:'rgba(251,146,60,0.15)',color:'#fb923c'},
+    'Felipe Rezes':      {bg:'rgba(251,146,60,0.15)',color:'#fb923c'},
+    'Cairo Vitoriano':   {bg:'rgba(0,214,143,0.15)',color:'#00d68f'},
   };
   const grid = document.getElementById('respGrid');
   grid.innerHTML = resps.map((r,ri) => {
@@ -730,5 +1608,6 @@ document.getElementById('s-vol_total').textContent = ' ↓';
 updateKPIs();
 renderTable();
 </script>
-</body>
-</html>
+
+
+</body></html>
